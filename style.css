@@ -324,8 +324,9 @@ section {
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
+  margin-top: 1rem;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .experience-details-container {
@@ -369,6 +370,7 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-title {
@@ -430,4 +432,93 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/*Resume*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+.summary-about-me {
+  margin-bottom: 15px;
+}
+
+.bottom-margin-text {
+  margin-top: 1rem;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0; /* Start hidden */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  transform: translateY(20px);
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
